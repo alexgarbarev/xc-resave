@@ -45,6 +45,8 @@ static void loadXcodeFrameworks() {
       [[xcodeBundle privateFrameworksURL] URLByDeletingLastPathComponent];
   NSArray<NSString *> *frameworks = @[
     @"DVTFoundation.framework",
+    @"DVTKit.framework",
+    @"DFRSupportKit.framework",
     @"DVTSourceControl.framework",
     @"DVTServices.framework",
     @"DVTPortal.framework",
@@ -54,7 +56,7 @@ static void loadXcodeFrameworks() {
     @"IBAutolayoutFoundation.framework",
     @"SourceKit.framework",
     @"IDEFoundation.framework",
-    @"Xcode3Core.ideplugin",
+    @"Xcode3Core.ideplugin"
   ];
   NSArray *xcodeSubdirectories =
       [[NSFileManager defaultManager] contentsOfDirectoryAtURL:xcodeContentsURL
